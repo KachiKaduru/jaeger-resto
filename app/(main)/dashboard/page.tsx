@@ -1,7 +1,9 @@
+import Heading from "@/app/_components/Heading";
+
 export default function DashboardPage() {
   return (
     <div>
-      <h1>Dashboard page</h1>
+      <Heading>Dashboard page</Heading>
     </div>
   );
 }

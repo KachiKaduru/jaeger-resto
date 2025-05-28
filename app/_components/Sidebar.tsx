@@ -13,12 +13,12 @@ export default function Sidebar() {
       <ul>
         {sidebarNav.map((nav) => (
           <li key={nav.title}>
-            <Link href={nav.href}>
-              <div className="grid place-content-center w-14 h-14 rounded-md">
-                <nav.icon className="text-[#EA7C69] w-6 h-6" />
+            <Link href={nav.href} className="flex items-center justify-center w-24 h-24">
+              <div className="grid place-content-center w-14 h-14 rounded-xl text-[#EA7C69] hover:text-white hover:bg-[#EA7C69]">
+                <nav.icon className=" w-6 h-6" />
               </div>
 
-              <span>{nav.title}</span>
+              {/* <span>{nav.title}</span> */}
             </Link>
           </li>
         ))}
