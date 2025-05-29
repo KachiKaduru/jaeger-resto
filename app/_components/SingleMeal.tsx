@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type MealProps = {
   meal: {
     id: string;
@@ -12,15 +14,17 @@ type MealProps = {
 };
 
 export default function SingleMeal({ meal }: MealProps) {
-  const { name, price } = meal;
+  const { name, price, image } = meal;
 
   return (
-    <div className="bg-[#1F1D2B] rounded-2xl border border-[#ccc]">
-      <div>image here{/* <img src="" alt="" /> */}</div>
+    <div className="bg-[#1F1D2B] rounded-2xl p-6 flex flex-col items-center">
+      <div className="relative w-36 h-36">
+        <Image src={image} alt={name} fill className="object-cover object-center rounded-[50%]" />
+      </div>
 
-      <h3>{name}</h3>
+      <h3 className="text-sm font-semibold mt-4 text-center">{name}</h3>
 
-      <h4>{price}</h4>
+      <h4 className="text-sm">${price}</h4>
     </div>
   );
 }

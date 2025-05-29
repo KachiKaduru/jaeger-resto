@@ -1,7 +1,11 @@
+import Heading from "@/app/_components/Heading";
+
 export default function SettingsPage() {
   return (
     <div>
-      <h1>Settings Page</h1>
+      <header>
+        <Heading>Settings</Heading>
+      </header>
     </div>
   );
 }

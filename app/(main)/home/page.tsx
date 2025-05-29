@@ -1,4 +1,4 @@
-import Filters from "@/app/_components/Filters";
+import Filters from "@/app/_components/home/Filters";
 import Heading from "@/app/_components/Heading";
 import SingleMeal from "@/app/_components/SingleMeal";
 import { getAllMeals } from "@/app/_lib/data-service";
@@ -6,7 +6,6 @@ import { todayDate } from "@/app/helpers/dateFormatter";
 
 export default async function Homepage() {
   const meals = await getAllMeals();
-
   // console.log(meals);
 
   return (

@@ -2,8 +2,20 @@
 
 * {
   outline: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 .grid-cols-200px {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 0.25fr 0.4fr 0.1fr 0.15fr 0.1fr;
+  gap: 20px;
 }
