@@ -6,7 +6,7 @@ type Props = {
 
 export default function MainLayout({ children }: Props) {
   return (
-    <section className="grid grid-cols-[auto_1fr] bg-[#252836] h-screen text-white">
+    <section className="grid grid-cols-[auto_1fr] bg-[#252836] text-white">
       <Sidebar />
 
       <main className="p-6">{children}</main>

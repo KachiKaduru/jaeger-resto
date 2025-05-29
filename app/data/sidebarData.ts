@@ -3,14 +3,14 @@ import {
   ChartPieIcon,
   Cog6ToothIcon,
   EnvelopeIcon,
-  HomeModernIcon,
+  HomeIcon,
 } from "@heroicons/react/24/outline";
 
 export const sidebarNav = [
   {
     href: "/home",
     title: "Home",
-    icon: HomeModernIcon,
+    icon: HomeIcon,
   },
   {
     href: "/dashboard",
