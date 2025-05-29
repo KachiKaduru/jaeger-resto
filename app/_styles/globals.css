@@ -16,6 +16,10 @@
 
 .table-row {
   display: grid;
-  grid-template-columns: 0.25fr 0.4fr 0.1fr 0.15fr 0.1fr;
+  grid-template-columns: 0.25fr 0.35fr 0.1fr 0.15fr 0.15fr;
   gap: 20px;
+}
+
+.calc-height {
+  height: calc(100dvh - 100px);
 }

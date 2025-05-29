@@ -1,11 +1,7 @@
-import Heading from "@/app/_components/Heading";
-
 export default function SettingsPage() {
   return (
-    <div>
-      <header>
-        <Heading>Settings</Heading>
-      </header>
-    </div>
+    <section>
+      <h1>This is where you can edit your different account settings</h1>
+    </section>
   );
 }

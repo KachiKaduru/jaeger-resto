@@ -1,12 +1,19 @@
+import Heading from "@/app/_components/Heading";
 import SettingsSidebar from "@/app/_components/settings/SettingsSidebar";
 import { ChildrenProps } from "@/app/types/childrenProps";
 
 export default function SettingsLayout({ children }: ChildrenProps) {
   return (
-    <section>
-      <SettingsSidebar />
+    <section className="h-[90dvh] flex flex-col gap-y-6">
+      <header>
+        <Heading>Settings</Heading>
+      </header>
 
-      <main>{children}</main>
+      <main className="grid grid-cols-[auto_1fr] gap-6">
+        <SettingsSidebar />
+
+        <section className="bg-[#1F1D2B] rounded-lg calc-height">{children}</section>
+      </main>
     </section>
   );
 }
