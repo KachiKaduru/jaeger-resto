@@ -1,5 +1,5 @@
 import {
-  BellAlertIcon,
+  BellIcon,
   BuildingStorefrontIcon,
   HeartIcon,
   LockClosedIcon,
@@ -33,7 +33,7 @@ export const settingsSidebarArr = [
     href: "/settings/notifications",
     title: "Notifications",
     description: "Customize your notification preferences",
-    icon: BellAlertIcon,
+    icon: BellIcon,
   },
   {
     id: 5,
