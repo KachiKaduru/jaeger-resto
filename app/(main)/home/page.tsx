@@ -1,12 +1,14 @@
 import Filters from "@/app/_components/home/Filters";
 import Heading from "@/app/_components/Heading";
-import SingleMeal from "@/app/_components/SingleMeal";
 import { getAllMeals } from "@/app/_lib/data-service";
 import { todayDate } from "@/app/helpers/dateFormatter";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import MealsList from "@/app/_components/home/MealsList";
 
 export default async function Homepage() {
   const meals = await getAllMeals();
+
+  // console.log(searchParams);
   // console.log(meals);
 
   return (
@@ -26,11 +28,7 @@ export default async function Homepage() {
       <main className="space-y-6">
         <Filters />
 
-        <div className="grid gap-x-7 gap-y-6 grid-cols-200px">
-          {meals.map((meal) => (
-            <SingleMeal key={meal.id} meal={meal} />
-          ))}
-        </div>
+        <MealsList meals={meals} />
       </main>
     </section>
   );

@@ -7,7 +7,15 @@ export default function LandingPage() {
     <main className="min-h-screen bg-[#252836] text-white flex flex-col items-center justify-center px-6 py-12 relative">
       <PulseMotion>
         <h1 className="text-4xl md:text-5xl font-bold text-[#EA7C69] mb-4 flex items-center justify-center gap-2">
-          Welcome to Jaeger Resto 🍽️
+          Welcome to Jaeger Resto
+          <span className="w-8 h-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width={40} height={40} viewBox="0 0 15 15">
+              <path
+                fill="currentColor"
+                d="M4.457 11.99L1 8V7h13v1l-3.496 3.99ZM3.988 2.5a.5.5 0 0 0-1 0v.567l-1.797.368a.25.25 0 1 0 .094.49l1.703-.277v.566l-1.75.036a.25.25 0 0 0 0 .5l1.75.036v1.212h1Zm9.5 1.5l-7.5.263V2.995l7.594-1.074a.5.5 0 0 0-.188-.982L5.98 2.455a.496.496 0 0 0-.99.045v.228l-.494.1v.352l.493-.08v1.197l-.493.01v.461L13.488 5a.5.5 0 0 0 0-1M10 13H5v.576h5Z"
+              ></path>
+            </svg>
+          </span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-6">
           Your internal restaurant management solution. Designed to help staff and employees manage
