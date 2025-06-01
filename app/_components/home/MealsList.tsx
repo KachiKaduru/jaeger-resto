@@ -1,14 +1,18 @@
-import { Meal } from "@/app/types/meal";
 import SingleMeal from "../SingleMeal";
+import { getAllMeals } from "@/app/_lib/data-service";
 
-type MealsArray = {
-  meals: Meal[];
+type Props = {
+  filter: string;
 };
 
-export default function MealsList({ meals }: MealsArray) {
+export default async function MealsList({ filter }: Props) {
+  const meals = await getAllMeals();
+  const displayedMeals =
+    filter === "all" ? meals : meals.filter((meal) => meal.category.toLowerCase() === filter);
+
   return (
     <section className="grid gap-x-7 gap-y-6 grid-cols-200px">
-      {meals.map((meal) => (
+      {displayedMeals.map((meal) => (
         <SingleMeal key={meal.id} meal={meal} />
       ))}
     </section>

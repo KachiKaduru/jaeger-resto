@@ -3,7 +3,11 @@
 import { filterData } from "@/app/data/filtersData";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-export default function Filters() {
+type Props = {
+  filter: string;
+};
+
+export default function Filters({ filter }: Props) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -18,7 +22,13 @@ export default function Filters() {
     <div>
       <ul className="flex gap-8 font-semibold text-lg">
         {filterData.map((item) => (
-          <button key={item.title} onClick={() => handleFilter(item.filter)}>
+          <button
+            key={item.title}
+            onClick={() => handleFilter(item.filter)}
+            className={`hover:cursor-pointer ${
+              filter === item.filter ? "border-b-2 border-[#EA7C69] text-[#EA7C69]" : ""
+            }`}
+          >
             {item.title}
           </button>
         ))}

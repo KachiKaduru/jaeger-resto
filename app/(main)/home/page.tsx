@@ -1,15 +1,19 @@
 import Filters from "@/app/_components/home/Filters";
 import Heading from "@/app/_components/Heading";
-import { getAllMeals } from "@/app/_lib/data-service";
 import { todayDate } from "@/app/helpers/dateFormatter";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import MealsList from "@/app/_components/home/MealsList";
+import { Metadata } from "next";
+import { Suspense } from "react";
+import Spinner from "@/app/_components/Spinner";
 
-export default async function Homepage() {
-  const meals = await getAllMeals();
+export const metadata: Metadata = {
+  title: "Home",
+};
 
-  // console.log(searchParams);
-  // console.log(meals);
+export default async function Homepage({ searchParams }) {
+  const { menu } = await searchParams;
+  const filter = menu ?? "all";
 
   return (
     <section className="space-y-6">
@@ -26,9 +30,11 @@ export default async function Homepage() {
       </header>
 
       <main className="space-y-6">
-        <Filters />
+        <Filters filter={filter} />
 
-        <MealsList meals={meals} />
+        <Suspense fallback={<Spinner />} key={filter}>
+          <MealsList filter={filter} />
+        </Suspense>
       </main>
     </section>
   );
