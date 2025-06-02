@@ -1,6 +1,7 @@
 import OrderReport from "@/app/_components/dashboard/OrderReport";
 import StatCard from "@/app/_components/dashboard/StatCard";
 import Heading from "@/app/_components/Heading";
+import { statsArray } from "@/app/data/statcardsData";
 import { todayDate } from "@/app/helpers/dateFormatter";
 
 export default function DashboardPage() {
@@ -13,9 +14,9 @@ export default function DashboardPage() {
 
       <main className="space-y-6">
         <div className="flex gap-6">
-          <StatCard />
-          <StatCard />
-          <StatCard />
+          {statsArray.map((item) => (
+            <StatCard item={item} key={item.title} />
+          ))}
         </div>
 
         <div>

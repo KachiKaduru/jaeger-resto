@@ -25,7 +25,7 @@ export default function Filters({ filter }: Props) {
           <button
             key={item.title}
             onClick={() => handleFilter(item.filter)}
-            className={`hover:cursor-pointer ${
+            className={`hover:cursor-pointer pb-3 ${
               filter === item.filter ? "border-b-2 border-[#EA7C69] text-[#EA7C69]" : ""
             }`}
           >

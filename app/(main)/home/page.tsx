@@ -11,7 +11,13 @@ export const metadata: Metadata = {
   title: "Home",
 };
 
-export default async function Homepage({ searchParams }) {
+interface HomepageProps {
+  searchParams: {
+    menu?: string;
+  };
+}
+
+export default async function Homepage({ searchParams }: HomepageProps) {
   const { menu } = await searchParams;
   const filter = menu ?? "all";
 
