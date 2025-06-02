@@ -11,7 +11,7 @@ export default async function MealsList({ filter }: Props) {
     filter === "all" ? meals : meals.filter((meal) => meal.category.toLowerCase() === filter);
 
   return (
-    <section className="grid gap-x-7 gap-y-6 grid-cols-200px">
+    <section className="grid gap-x-4 sm:gap-x-7 gap-y-4 sm:gap-y-6 grid-cols-200px">
       {displayedMeals.map((meal) => (
         <SingleMeal key={meal.id} meal={meal} />
       ))}

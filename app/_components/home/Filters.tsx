@@ -19,13 +19,13 @@ export default function Filters({ filter }: Props) {
   }
 
   return (
-    <div>
-      <ul className="flex gap-8 font-semibold text-lg">
+    <div className="w-full overflow-auto">
+      <ul className="flex gap-4 sm:gap-8 font-semibold text-sm sm:text-lg">
         {filterData.map((item) => (
           <button
             key={item.title}
             onClick={() => handleFilter(item.filter)}
-            className={`hover:cursor-pointer pb-3 ${
+            className={`hover:cursor-pointer pb-3 min-w-fit ${
               filter === item.filter ? "border-b-2 border-[#EA7C69] text-[#EA7C69]" : ""
             }`}
           >

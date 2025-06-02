@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: "Home",
 };
 
-interface HomepageProps {
+type HomepageProps = {
   searchParams: {
     menu?: string;
   };
-}
+};
 
 export default async function Homepage({ searchParams }: HomepageProps) {
   const { menu } = await searchParams;
@@ -23,15 +23,20 @@ export default async function Homepage({ searchParams }: HomepageProps) {
 
   return (
     <section className="space-y-6">
-      <header className="flex justify-between items-center">
+      <header className="flex flex-col sm:flex-row gap-3 sm:gap-1 justify-between sm:items-center">
         <div>
           <Heading>Jaeger Resto</Heading>
           <p>{todayDate()}</p>
         </div>
 
-        <div className="flex gap-3 items-center bg-[#2D303E] border border-[#393C49] rounded-md p-3.5">
+        <div className="flex gap-3 items-center bg-[#2D303E] border border-[#393C49] rounded-md p-2.5 sm:p-3.5">
           <MagnifyingGlassIcon className="w-5 h-5" />
-          <input type="search" name="search" id="" placeholder="Search for meals, drinks, etc." />
+          <input
+            type="search"
+            name="search"
+            placeholder="Search for meals, drinks, etc."
+            className="w-full"
+          />
         </div>
       </header>
 
