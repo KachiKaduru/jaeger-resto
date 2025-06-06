@@ -28,6 +28,7 @@
   display: grid;
   grid-template-columns: 0.25fr 0.35fr 0.1fr 0.15fr 0.15fr;
   gap: 20px;
+  /* min-width: 100%; */
 }
 
 .calc-height {

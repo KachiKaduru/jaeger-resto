@@ -1,11 +1,12 @@
-import Filters from "@/app/_components/home/Filters";
-import Heading from "@/app/_components/Heading";
-import { todayDate } from "@/app/helpers/dateFormatter";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import MealsList from "@/app/_components/home/MealsList";
-import { Metadata } from "next";
 import { Suspense } from "react";
+import { Metadata } from "next";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+
+import { todayDate } from "@/app/helpers/dateFormatter";
+import Heading from "@/app/_components/Heading";
 import Spinner from "@/app/_components/Spinner";
+import MealsList from "@/app/_components/home/MealsList";
+import Filters from "@/app/_components/home/Filters";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -23,7 +24,7 @@ export default async function Homepage({ searchParams }: HomepageProps) {
 
   return (
     <section className="space-y-6">
-      <header className="flex flex-col sm:flex-row gap-3 sm:gap-1 justify-between sm:items-center">
+      <header className="flex flex-col sm:flex-row gap-4 sm:gap-1 justify-between sm:items-center">
         <div>
           <Heading>Jaeger Resto</Heading>
           <p>{todayDate()}</p>

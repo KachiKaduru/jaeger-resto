@@ -13,7 +13,7 @@ export default function DashboardPage() {
       </header>
 
       <main className="space-y-6">
-        <div className="flex gap-6">
+        <div className="flex gap-6 overflow-auto">
           {statsArray.map((item) => (
             <StatCard item={item} key={item.title} />
           ))}

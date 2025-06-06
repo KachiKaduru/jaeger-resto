@@ -4,7 +4,7 @@ import OrderTableRow from "./OrderTableRow";
 
 export default function ReportTable() {
   return (
-    <section>
+    <section className="overflow-auto">
       <OrderTableHeader />
 
       <div>
