@@ -18,7 +18,7 @@ export default function StatCard({ item }: Props) {
         <ArrowUpIcon className="w-5 h-5 bg-green-900 text-green-400 p-1 rounded-[50%]" />
       </header>
 
-      <h2 className="font-semibold text-[28px]">{figure}.00</h2>
+      <h2 className="font-semibold text-[28px]">{figure}</h2>
 
       <p className="text-[#ABBBC2] text-sm font-medium">Total {title}</p>
     </div>

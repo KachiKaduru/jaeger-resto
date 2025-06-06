@@ -1,9 +1,10 @@
 import { BookmarkIcon, CurrencyDollarIcon, UserGroupIcon } from "@heroicons/react/24/outline";
-import { SVGProps } from "react";
+import React from "react";
 
 export type StatItem = {
   title: string;
-  icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  // icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   iconColor: string;
   rate: number;
   figure: number;

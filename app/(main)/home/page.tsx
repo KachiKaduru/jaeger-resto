@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 };
 
 type HomepageProps = {
-  searchParams: {
+  searchParams: Promise<{
     menu?: string;
-  };
+  }>;
 };
 
 export default async function Homepage({ searchParams }: HomepageProps) {
