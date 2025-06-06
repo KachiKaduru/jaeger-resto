@@ -3,9 +3,13 @@
 import { settingsSidebarArr } from "@/app/data/settingsSidebarData";
 import Link from "next/link";
 
-export default function SettingsSidebar() {
+type Props = {
+  className: string;
+};
+
+export default function SettingsSidebar({ className }: Props) {
   return (
-    <nav className={`bg-[#1F1D2B] calc-height rounded-xl `}>
+    <nav className={`bg-[#1F1D2B] calc-height rounded-xl ${className}`}>
       <ul className="grid gap-1">
         {settingsSidebarArr.map((item) => (
           <li key={item.id} className="hover:bg-[#ea7c6942] hover:text-[#ea7c69] p-6 nav-item">

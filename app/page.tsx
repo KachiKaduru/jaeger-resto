@@ -8,7 +8,7 @@ export default function LandingPage() {
     <main className="min-h-screen bg-[#252836] text-white flex flex-col items-center justify-center px-6 py-12 relative">
       <PulseMotion>
         <h1 className="text-3xl mt-3 sm:mt-0 sm:text-4xl md:text-5xl font-bold text-[#EA7C69] mb-4 flex items-center justify-center gap-2">
-          Welcome to Jaeger Resto
+          <span>Jaeger Resto</span>
           <DishBowl />
         </h1>
 

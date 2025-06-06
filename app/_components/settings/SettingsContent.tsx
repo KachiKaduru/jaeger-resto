@@ -8,13 +8,18 @@ export default function SettingsContent({ children }: ChildrenProps) {
   const pathname = usePathname();
   const isBaseSettings = pathname === "/settings";
 
-  console.log(isBaseSettings);
-  // ${isBaseSettings ? "block" : "hidden"}
+  // console.log(isBaseSettings);
   return (
-    <main className="grid grid-cols-[auto_1fr] gap-6">
-      <SettingsSidebar />
+    <main className="grid sm:grid-cols-[auto_1fr] gap-6">
+      <SettingsSidebar className={`${isBaseSettings ? "block" : "hidden"} sm:block`} />
 
-      <section className="bg-[#1F1D2B] rounded-xl calc-height min-w-full">{children}</section>
+      <section
+        className={`bg-[#1F1D2B] rounded-xl calc-height min-w-full ${
+          isBaseSettings ? "hidden" : "block"
+        } sm:block`}
+      >
+        {children}
+      </section>
     </main>
   );
 }
