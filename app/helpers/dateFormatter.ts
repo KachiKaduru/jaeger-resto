@@ -22,3 +22,20 @@ export function todayDate(): string {
 
   return `${getFormattedDate()}`;
 }
+
+// lib/utils/formatDate.ts
+
+export function formatDate(isoDate: string): string {
+  const date = new Date(isoDate);
+  const now = new Date();
+  const diff = Math.floor((now.getTime() - date.getTime()) / 1000); // in seconds
+
+  if (diff < 60) return `${diff}s ago`;
+  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+
+  return `${date.toLocaleDateString()} at ${date.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  })}`;
+}
