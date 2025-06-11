@@ -20,3 +20,22 @@ export async function getMealsByCategory(category: string) {
   }
   return data;
 }
+
+export async function getMessages() {
+  const { data, error } = await supabase.from("messages").select("*");
+
+  if (error) {
+    console.error(error);
+    throw new Error("Messages could not be loaded");
+  }
+
+  return data;
+}
+
+export const sendMessage = async (sender: string, content: string) => {
+  await supabase.from("messages").insert({
+    sender,
+    content,
+  });
+  // Clear the input after sending
+};
