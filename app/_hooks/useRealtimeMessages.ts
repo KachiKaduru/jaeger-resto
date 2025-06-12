@@ -15,7 +15,7 @@ export function useRealtimeMessages() {
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "messages" },
         (payload) => {
-          setMessages((prev) => [...prev, payload.new]); // Add new message to state
+          setMessages((prev: Message[]) => [...prev, payload.new as Message]); // Add new message to state
         }
       )
       .subscribe();

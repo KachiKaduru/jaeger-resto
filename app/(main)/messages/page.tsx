@@ -10,6 +10,7 @@ export default async function MessagesPage() {
     <div className="flex flex-col h-full gap-2">
       <Heading>Messages</Heading>
 
+      {/* <MessagesContent /> */}
       <MessagesContent messagesData={messagesData} />
 
       <MessageForm />
