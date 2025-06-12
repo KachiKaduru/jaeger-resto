@@ -9,7 +9,7 @@ export default async function MessagesPage() {
   const messagesData = await getMessages();
 
   return (
-    <div className="flex flex-col h-full gap-2">
+    <div className="grid grid-rows-[auto_1fr_auto] h-full gap-2">
       <Heading>Messages</Heading>
 
       {/* <MessagesContent /> */}
