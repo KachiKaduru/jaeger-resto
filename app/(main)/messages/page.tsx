@@ -3,6 +3,8 @@ import MessageForm from "@/app/_components/messages/MessageForm";
 import MessagesContent from "@/app/_components/messages/MessagesContent";
 import { getMessages } from "@/app/_lib/data-service";
 
+export const revalidate = 0;
+
 export default async function MessagesPage() {
   const messagesData = await getMessages();
 
